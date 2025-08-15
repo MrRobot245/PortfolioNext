@@ -17,7 +17,7 @@
     "axios": "^1.7.9",
     "bootstrap": "^5.3.3",
     "framer-motion": "^12.0.6",
-    "motion": "^12.4.1",
+    "motion": "^12.23.12",
     "next": "^15.4.6",
     "next-recaptcha-v3": "^1.5.2",
     "next-sanity": "^9.12.3",

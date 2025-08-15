@@ -15,6 +15,7 @@ import  { SEO_QUERY } from '@/sanity/lib/queries'
 export default function Home() {
   return (
     <main>
+       <Hero />
       {/* <Hero />
       <LandingBrands />
       <LandingDivisions />

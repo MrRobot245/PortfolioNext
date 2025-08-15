@@ -1,6 +1,7 @@
 // "use client";
 import 'bootstrap/dist/css/bootstrap-grid.min.css';
 import "../fonts.css";
+import "../bulk.css";
 import "../globals.css";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
