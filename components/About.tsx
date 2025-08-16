@@ -73,13 +73,14 @@ export default async function About() {
                         </div>
 
                         {/* Right Sidebar */}
-
-                        <div className="biography">
-                            <div className="myphoto">
-                                <img src={urlFor(about.aboutPicture).url()} alt="" />
-                            </div>
-                            <div className="text-sm w-full text-gray-700 space-y-2 aboutInfoWrapper text-left pt-[25px] pb-[30px] px-3">
-                                <PortableText value={about.aboutInfo} />
+                        <div data-aos="fade-down" data-aos-once="true" data-aos-duration="1500">
+                            <div className="biography">
+                                <div className="myphoto">
+                                    <img src={urlFor(about.aboutPicture).url()} alt="" />
+                                </div>
+                                <div className="text-sm w-full text-gray-700 space-y-2 aboutInfoWrapper text-left pt-[25px] pb-[30px] px-3">
+                                    <PortableText value={about.aboutInfo} />
+                                </div>
                             </div>
                         </div>
                     </div>
