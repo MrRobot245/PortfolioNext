@@ -51,8 +51,7 @@ const MainHero = () => {
 
                     className="transition duration-300 ease-in-out cursor-pointer w-10 h-10 flex items-center justify-center border border-white rounded-lg transform rotate-45 bg-transparent hover:bg-[#68c3a3]"
                   >
-                    <FontAwesomeIcon icon={icon.icon} inverse rotateBy
-                      style={{ '--fa-rotate-angle': '-45deg' }} />
+                    <FontAwesomeIcon icon={icon.icon} inverse className="-rotate-45" />
                   </div>
                 </Link>
               ))}
