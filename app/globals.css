@@ -20,3 +20,6 @@ h6 {
   line-height: 1.1;
   color: inherit;
 }
+html {
+  scroll-behavior: smooth;
+}
