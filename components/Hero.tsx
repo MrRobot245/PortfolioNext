@@ -1,19 +1,27 @@
-// import { client } from '@/sanity/lib/client'
+import { client } from '@/sanity/lib/client'
 import { urlFor } from '@/sanity/lib/image';
 import { MAIN_QUERY } from '@/sanity/lib/queries'
+import { PortableText } from 'next-sanity';
 import { RotatingText } from '@/components/ui/shadcn-io/rotating-text';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGithub, faApple } from '@fortawesome/free-brands-svg-icons';
-import { faHeartPulse, faCameraRetro } from '@fortawesome/free-solid-svg-icons';
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { fas } from '@fortawesome/free-solid-svg-icons'
+import { far } from '@fortawesome/free-regular-svg-icons'
+import { fab } from '@fortawesome/free-brands-svg-icons'
+
+// Add all icons to the library so you can use it in your page
+
+library.add(fas, far, fab)
 import Link from 'next/link';
-const icons = [
-  { icon: faGithub, url: "https://github.com/MrRobot245" },
-  { icon: faHeartPulse, url: "http://pulsepassion.ca" },
-  { icon: faApple, url: "https://itunes.apple.com/us/app/mypulseplus/id1094113394?ls=1&mt=8" },
-  { icon: faCameraRetro, url: "/photography" },
-];
-const MainHero = () => {
-  // const hero = await client.fetch(MAIN_QUERY)
+// const icons = [
+//   // { icon: faGithub, url: "https://github.com/MrRobot245" },
+//   // { icon: faHeartPulse, url: "http://pulsepassion.ca" },
+//   // { icon: faApple, url: "https://itunes.apple.com/us/app/mypulseplus/id1094113394?ls=1&mt=8" },
+//   // { icon: faCameraRetro, url: "/photography" },
+// ];
+const MainHero = async () => {
+  const hero = await client.fetch(MAIN_QUERY)
+  console.log(hero)
   return (
     <>
 
@@ -25,28 +33,24 @@ const MainHero = () => {
               <div id="rotate">
                 <RotatingText
                   className="text-4xl font-semibold"
-                  text={['SOFTWARE ENGINEER', 'Full Stack Developer', 'React/Next.js Developer']}
+                  text={hero.scrollingText.map((item: { text: string }) => item.text)}
                 />
               </div>
             </h1>
-            <p>
-              “You don’t have to know everything. <br />
-              You simply need to know where to find it when necessary.”
-            </p>
-            {/* <p>“Never let a computer know you're in a hurry.”</p> */}
+            <PortableText value={hero.quote} />
             <div className="social-icons">
               <div className="flex justify-center gap-8 py-8">
-                {icons.map((icon, i) => (
+                {hero.links.map((link, i) => (
                   <Link
                     key={i}
-                    href={icon.url}
+                    href={link.url}
                     target='_blank'
                   >
                     <div
 
                       className="transition duration-300 ease-in-out cursor-pointer w-10 h-10 flex items-center justify-center border border-white rounded-lg transform rotate-45 bg-transparent hover:bg-[#68c3a3]"
                     >
-                      <FontAwesomeIcon icon={icon.icon} inverse className="-rotate-45" />
+                      <FontAwesomeIcon icon={[link.fa, link.faIcon]} inverse className="-rotate-45" />
                     </div>
                   </Link>
                 ))}
