@@ -23,6 +23,7 @@ export default function Home() {
     <main>
       <Hero />
       <Navbar />
+      <div id="home" className="container mx-auto max-w-4xl p-8"></div>
       <About />
       <Resume />
       <Skills />
