@@ -3,6 +3,10 @@ import 'bootstrap/dist/css/bootstrap-grid.min.css';
 import "../fonts.css";
 import "../bulk.css";
 import "../globals.css";
+// In _app.js (Pages Router) or layout.tsx (App Router)
+import '@fortawesome/fontawesome-svg-core/styles.css'; // Import Font Awesome CSS
+import { config } from '@fortawesome/fontawesome-svg-core';
+config.autoAddCss = false; // Prevent Font Awesome from adding its own CSS
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import { Inter } from "next/font/google";
@@ -18,12 +22,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en" suppressHydrationWarning>
       <AOSInit />
-        <ReCaptchaProvider reCaptchaKey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}>
-      <body>
+      <ReCaptchaProvider reCaptchaKey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}>
+        <body>
           {children}
           {/* <Footer /> */}
-      </body>
-      <GoogleAnalytics gaId={myGtmId} />
+        </body>
+        <GoogleAnalytics gaId={myGtmId} />
       </ReCaptchaProvider>
     </html>
   );
