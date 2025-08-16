@@ -1,4 +1,8 @@
 import Hero from "@/components/Hero";
+import About from "@/components/About";
+import Resume from "@/components/Resume";
+import Skills from "@/components/Skills";
+import Works from "@/components/Works";
 import Navbar from "@/components/Navbar";
 import Contact from "@/components/Contact";
 import { client } from '@/sanity/lib/client'
@@ -19,6 +23,10 @@ export default function Home() {
     <main>
       <Hero />
       <Navbar />
+      <About />
+      <Resume />
+      <Skills />
+      <Works />
       <Contact />
 
     </main>

@@ -288,6 +288,7 @@ ul.list-check li::before {
   line-height: 50px;
   color: #2c3e50;
   position: relative;
+  font-weight: 700;
 }
 
 .section-title::after {
@@ -325,8 +326,8 @@ ul.list-check li::before {
   min-height: 900px;
 }
 /* #home {
-  background: url(/images/home2.jpg) no-repeat center center;
   -webkit-background-attachment: fixed;
+  background: url(/images/home2.jpg) no-repeat center center;
   background-attachment: fixed;
   background-color: #222;
   background-size: cover;
@@ -1803,4 +1804,7 @@ Icon for all respective meta
   border: 5px solid #fff;
   padding: 5px;
   box-shadow: 0 0px 0px 1px #eee;
+}
+h2 {
+  font-weight: 700;
 }

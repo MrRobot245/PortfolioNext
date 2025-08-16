@@ -33,12 +33,11 @@ export default function Contact() {
                 <h2
                     className="section-title"
                     data-aos="fade-up" data-aos-once="true" data-aos-duration="1500"
-                // style={{ visibility: "visible", animationName: "fadeInUp" }}
                 >
                     Get in touch
                 </h2>
                 <div className="row">
-                    <div className="col-md-12">
+                    <div className="col-md-12" data-aos="fade-up" data-aos-once="true" data-aos-duration="1500">
                         <h2 className="text-lg font-bold mb-6">SEND ME A MESSAGE</h2>
 
                         <form onSubmit={handleSubmit} className="space-y-6">
