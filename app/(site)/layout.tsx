@@ -7,8 +7,8 @@ import "../globals.css";
 import '@fortawesome/fontawesome-svg-core/styles.css'; // Import Font Awesome CSS
 import { config } from '@fortawesome/fontawesome-svg-core';
 config.autoAddCss = false; // Prevent Font Awesome from adding its own CSS
-import Footer from "@/components/Footer";
-import Header from "@/components/Header";
+// import Footer from "@/components/Footer";
+// import Header from "@/components/Header";
 import { Inter } from "next/font/google";
 import { GoogleAnalytics } from '@next/third-parties/google'
 // const inter = Inter({ subsets: ["latin"] });
