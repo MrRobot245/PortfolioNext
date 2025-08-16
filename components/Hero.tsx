@@ -21,14 +21,14 @@ import Link from 'next/link';
 // ];
 const MainHero = async () => {
   const hero = await client.fetch(MAIN_QUERY)
-  console.log(hero)
+  // console.log(hero)
   return (
     <>
 
       <section>
         <div className="heroWrapper min-h-[900px] flex items-center justify-center h-screen">
           <div className="intro">
-            <div className="intro-sub">Nathan Reymer</div>
+            <div className="intro-sub">{hero.title}</div>
             <h1>
               <div id="rotate">
                 <RotatingText

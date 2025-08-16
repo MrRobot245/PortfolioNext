@@ -1,5 +1,6 @@
 import Hero from "@/components/Hero";
 import Navbar from "@/components/Navbar";
+import Contact from "@/components/Contact";
 import { client } from '@/sanity/lib/client'
 import { SEO_QUERY } from '@/sanity/lib/queries'
 
@@ -18,6 +19,7 @@ export default function Home() {
     <main>
       <Hero />
       <Navbar />
+      <Contact />
 
     </main>
   );
