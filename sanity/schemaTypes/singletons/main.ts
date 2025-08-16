@@ -71,6 +71,12 @@ export default defineType({
       validation: (Rule) => Rule.required(),
     }),
     defineField({
+      name: "resume",
+      title: "Resume",
+      type: "file",
+      validation: (Rule) => Rule.required(),
+    }),
+    defineField({
       name: "aboutObjective",
       title: "About Objective",
       type: "text",

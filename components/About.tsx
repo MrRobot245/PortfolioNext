@@ -65,7 +65,7 @@ export default async function About() {
                                 <a className="btn btn-info btn-lg" href="#contact">
                                     <FontAwesomeIcon icon={['fas', 'paper-plane']} inverse className="mr-2" />
                                     Send me message</a>
-                                <a className="btn btn-primary btn-lg" href="files/Resume.pdf">
+                                <a className="btn btn-primary btn-lg" href={about.resumeURL} target="_blank" rel="noopener noreferrer">
                                     {/* <i className="fa fa-download"></i> */}
                                     <FontAwesomeIcon icon={['fas', 'download']} inverse className="mr-2" />
                                     Download my CV</a>

@@ -6,7 +6,8 @@ export const HERO_QUERY = defineQuery(`*[_type=="heros" ][0]{
 }`);
 
 export const MAIN_QUERY = defineQuery(`*[_type=="main" ][0]{
-  ...,
+   "resumeURL": resume.asset->url,
+   ...,
   
 }`);
 
