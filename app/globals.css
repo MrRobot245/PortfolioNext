@@ -23,3 +23,7 @@ h6 {
 html {
   scroll-behavior: smooth;
 }
+b,
+strong {
+  font-weight: bold;
+}

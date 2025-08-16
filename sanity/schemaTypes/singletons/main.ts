@@ -70,6 +70,49 @@ export default defineType({
       of: [{ type: "block" }],
       validation: (Rule) => Rule.required(),
     }),
+    defineField({
+      name: "aboutObjective",
+      title: "About Objective",
+      type: "text",
+      validation: (Rule) => Rule.required(),
+    }),
+    defineField({
+      name: "aboutWhoAmI",
+      title: "About Who Am I",
+      type: "text",
+      validation: (Rule) => Rule.required(),
+    }),
+    defineField({
+      name: "aboutSkills",
+      title: "Skills",
+      type: "array",
+      of: [
+        {
+          type: "object", // Defines an inline object type
+          fields: [
+            {
+              name: "text",
+              title: "Text",
+              type: "string",
+            },
+          ],
+        },
+      ],
+      validation: (Rule) => Rule.required(),
+    }),
+    defineField({
+      name: "aboutPicture",
+      title: "About Picture",
+      type: "image",
+      validation: (Rule) => Rule.required(),
+    }),
+    defineField({
+      name: "aboutInfo",
+      title: "About Info",
+      type: "array",
+      of: [{ type: "block" }],
+      validation: (Rule) => Rule.required(),
+    }),
   ],
 
   preview: {

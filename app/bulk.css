@@ -1809,3 +1809,14 @@ Icon for all respective meta
 h2 {
   font-weight: 700;
 }
+.aboutInfoWrapper {
+  p {
+    border-bottom: 1px solid #eeeeee;
+    padding: 5px 0;
+    font-size: 16px;
+  }
+}
+
+.clip-triangle {
+  clip-path: polygon(0 0, 100% 0, 100% 65%, 50% 100%, 0 65%);
+}
