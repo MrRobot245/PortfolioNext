@@ -27,3 +27,19 @@ b,
 strong {
   font-weight: bold;
 }
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+.timeline-heading h3 {
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 700;
+  margin: 0;
+  text-transform: uppercase;
+}
+p {
+  margin: 0 0 10px;
+  line-height: 25px;
+}

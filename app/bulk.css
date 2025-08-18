@@ -28,7 +28,7 @@
 */
 
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: "Roboto", "Comic Sans MS";
   line-height: 28px;
   font-weight: 300;
   font-size: 14px;
@@ -674,6 +674,12 @@ Resume Timeline
 }
 .resume-title h3 {
   text-align: center;
+
+  font-size: 24px;
+  line-height: 24px;
+  font-weight: 700;
+  margin: 0;
+  text-transform: uppercase;
 }
 .resume-section > div > div {
   margin-bottom: 60px;
@@ -762,19 +768,19 @@ Resume Timeline
   padding: 5px 20px 0 20px;
 }
 
-.timeline > li .timeline-panel:before {
+/* .timeline > li .timeline-panel:before {
   right: auto;
   left: -15px;
   border-right-width: 15px;
   border-left-width: 0;
-}
+} */
 
-.timeline > li .timeline-panel:after {
+/* .timeline > li .timeline-panel:after {
   right: auto;
   left: -14px;
   border-right-width: 14px;
   border-left-width: 0;
-}
+} */
 
 .timeline > li .posted-date {
   position: relative;
@@ -861,14 +867,14 @@ Resume Timeline
   }
 
   .timeline-content::after {
-    border: 1px solid #eee;
+    /* border: 1px solid #eee;
     width: 100%;
     position: absolute;
     content: "";
     bottom: -3px;
     height: 10px;
     left: 0;
-    z-index: -1;
+    z-index: -1; */
   }
 
   .timeline > li .timeline-content:hover {
@@ -878,31 +884,31 @@ Resume Timeline
 
   .timeline > li .timeline-panel::before,
   .timeline > li.timeline-inverted .timeline-panel::before {
-    content: "";
+    /* content: "";
     top: 25px;
     position: absolute;
     border-top: 10px solid transparent;
-    border-bottom: 10px solid transparent;
+    border-bottom: 10px solid transparent; */
   }
   .timeline > li .timeline-panel::before {
     left: 100%;
-    border-left: 12px solid #ececec;
+    /* border-left: 12px solid #ececec;
     -webkit-transition: all 400ms;
     -moz-transition: all 400ms;
     -o-transition: all 400ms;
-    transition: all 400ms;
+    transition: all 400ms; */
   }
   .timeline > li .timeline-panel:hover::before {
     border-left: 12px solid #68c3a3;
   }
 
   .timeline > li.timeline-inverted .timeline-panel::before {
-    right: 100%;
+    /* right: 100%;
     border-right: 12px solid #ececec;
     -webkit-transition: all 400ms;
     -moz-transition: all 400ms;
     -o-transition: all 400ms;
-    transition: all 400ms;
+    transition: all 400ms; */
   }
   .timeline > li.timeline-inverted .timeline-panel:hover::before {
     border-right: 12px solid #68c3a3;
@@ -911,20 +917,20 @@ Resume Timeline
 
   .timeline > li .timeline-panel::after,
   .timeline > li.timeline-inverted .timeline-panel::after {
-    content: "";
+    /* content: "";
     top: 25px;
     position: absolute;
     border-top: 10px solid transparent;
-    border-bottom: 10px solid transparent;
+    border-bottom: 10px solid transparent; */
   }
   .timeline > li .timeline-panel::after {
-    left: 100%;
+    /* left: 100%;
     margin-left: -2px;
     border-left: 12px solid #ffffff;
     -webkit-transition: all 400ms;
     -moz-transition: all 400ms;
     -o-transition: all 400ms;
-    transition: all 400ms;
+    transition: all 400ms; */
   }
   .timeline > li .timeline-panel:hover::after {
     border-left: 12px solid #68c3a3;

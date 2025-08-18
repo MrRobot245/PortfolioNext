@@ -3,6 +3,13 @@ import 'bootstrap/dist/css/bootstrap-grid.min.css';
 import "../fonts.css";
 import "../bulk.css";
 import "../globals.css";
+import "@fontsource/roboto";
+import "@fontsource/roboto/300.css";
+import "@fontsource/roboto/400.css";
+import "@fontsource/roboto/500.css";
+import "@fontsource/roboto/600.css";
+import "@fontsource/roboto/700.css";
+import "@fontsource/roboto/800.css";
 // In _app.js (Pages Router) or layout.tsx (App Router)
 import '@fortawesome/fontawesome-svg-core/styles.css'; // Import Font Awesome CSS
 import { config } from '@fortawesome/fontawesome-svg-core';
