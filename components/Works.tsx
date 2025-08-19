@@ -18,7 +18,7 @@ export default async function Works() {
                 <div id="grid" className="row">
                     {works.worksList.map((work, idx) => (
                         <div
-                            className="portfolio-item col-xs-12 col-sm-4 col-md-4">
+                            className="portfolio-item col-xs-12 col-sm-4 col-md-4" key={idx}>
                             <div className="portfolio-bg">
                                 <div className="portfolio">
                                     <div className="tt-overlay" />
