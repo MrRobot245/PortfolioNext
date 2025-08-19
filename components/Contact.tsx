@@ -29,7 +29,7 @@ export default function Contact() {
         <>
 
 
-            <div id="contact" className="container mt-20 mb-20 mx-auto">
+            <div id="contact" className="container mt-20 mb-20 mx-auto container p-4">
                 <h2
                     className="section-title"
                     data-aos="fade-up" data-aos-once="true" data-aos-duration="1500"

@@ -37,7 +37,7 @@ export default function Skills() {
                 </h2 >
             </div >
             <div className="bg-[#1a1e23]">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto  bg-[#1a1e23] ">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 container  mx-auto  bg-[#1a1e23] p-4 -mt-[2px]">
                     {skills.map((skill, idx) => (
                         <div key={idx}>
                             <div className="flex justify-between mb-1 text-sm font-medium  text-white">
@@ -63,9 +63,9 @@ export default function Skills() {
             </div>
 
             {/* More Skills */}
-            <div className="bg-[#1a1e23] pb-20">
+            <div className="bg-[#1a1e23] pb-20 p-4 -mt-[2px]">
                 <h3 className="text-2xl font-semibold text-center pt-12 pb-6 bg-[#1a1e23] text-white">MORE SKILLS</h3>
-                <div className="grid grid-cols-2 md:grid-cols-3 gap-8 max-w-4xl mx-auto bg-[#1a1e23]">
+                <div className="grid grid-cols-2 md:grid-cols-3 gap-8 container  mx-auto bg-[#1a1e23]">
                     {moreSkills.map((skill, idx) => {
                         const R = 45;
                         const C = 2 * Math.PI * R; // ~282.6

@@ -22,7 +22,7 @@ export default async function About() {
                 <div className="flex items-center justify-center">
                     <div className="w-full rounded-2xl grid md:grid-cols-3">
                         {/* Left Content */}
-                        <div className="md:col-span-2 p-8">
+                        <div className="md:col-span-2 p-4">
                             {/* Objective */}
                             <h2 className="text-xl font-bold mb-2">OBJECTIVE</h2>
                             <p className="mb-6 text-gray-700">{about.aboutObjective}</p>

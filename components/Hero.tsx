@@ -23,7 +23,7 @@ const MainHero = async () => {
     <>
 
       <section>
-        <div className="heroWrapper min-h-[900px] flex items-center justify-center h-screen">
+        <div className="heroWrapper min-h-[900px] flex items-center justify-center h-screen p-4">
           <div className="intro">
             <div className="intro-sub">{hero.title}</div>
             <h1>

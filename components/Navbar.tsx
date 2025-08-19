@@ -21,7 +21,7 @@ export default function Navbar() {
     );
 
     const getLinkClasses = (href: string) =>
-        `cursor-pointer hover:text-emerald-400 ${active === href ? "text-emerald-400" : "text-black"
+        `cursor-pointer hover:text-emerald-400 p-[5px] ${active === href ? "text-emerald-400" : "text-black"
         }`;
 
     useEffect(() => {
@@ -90,7 +90,7 @@ export default function Navbar() {
             {/* Mobile menu */}
             {isOpen && (
                 <div className="md:hidden px-4 pb-4 space-y-2 font-bold text-sm">
-                    {navLinks.map((link) => (
+                    {navLinks.slice(1).map((link) => (
                         <a
                             key={link.name}
                             href={link.href}
