@@ -48,8 +48,13 @@ export default function Skills() {
                                 <motion.div
                                     className="bg-emerald-400 h-3 rounded-full"
                                     initial={{ width: 0 }}
-                                    animate={{ width: animated ? `${skill.value}%` : 0 }}
-                                    transition={{ duration: 1, delay: idx * 0.2 }}
+                                    whileInView={{ width: `${skill.value}%` }}
+                                    transition={{
+                                        duration: 1,
+                                        delay: idx * 0.2,
+                                        ease: "easeInOut",
+                                    }}
+                                    viewport={{ once: true }}
                                 />
                             </div>
                         </div>
@@ -87,15 +92,13 @@ export default function Skills() {
                                             fill="none"
                                             strokeDasharray={C}
                                             strokeDashoffset={C}
-                                            animate={{
+                                            whileInView={{
                                                 strokeDashoffset: C - (C * skill.value) / 100,
                                             }}
-                                            transition={{ duration: 1.2, delay: idx * 0.2 }}
+                                            transition={{ duration: 1.2, delay: idx * 0.2, ease: "easeInOut", }}
                                             strokeLinecap="round"
                                         />
                                     </g>
-
-                                    {/* Upright, centered, emerald text */}
                                     <text
                                         x="50"
                                         y="50"
