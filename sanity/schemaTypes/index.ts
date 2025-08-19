@@ -1,7 +1,7 @@
-import blockContent from './blockContent'
+import blockContent from "./blockContent";
 
-import main from './singletons/main'
-import seo from './singletons/seo'
+import main from "./singletons/main";
+import photo from "./singletons/photos";
+import seo from "./singletons/seo";
 
-
-export const schemaTypes = [main, seo, blockContent]
+export const schemaTypes = [main, photo, seo, blockContent];

@@ -1,6 +1,6 @@
-import Hero from "@/components/Hero";
+import PhotoContent from "@/components/PhotoContent";
 import { client } from '@/sanity/lib/client'
-import { SEO_QUERY } from '@/sanity/lib/queries'
+import { SEO_QUERY, PHOTO_QUERY } from '@/sanity/lib/queries'
 
 export async function generateMetadata() {
     const seo = await client.fetch(SEO_QUERY)
@@ -12,13 +12,13 @@ export async function generateMetadata() {
     }
 } ``
 
-export default function Photography() {
-
+export default async function Photography() {
+    const photos = await client.fetch(PHOTO_QUERY);
 
     return (
         <>
             <main>
-                <Hero />
+                <PhotoContent photos={photos.photoCollection} />
             </main>
         </>
 
