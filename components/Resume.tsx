@@ -23,7 +23,7 @@ export default async function Resume() {
                             <div className="resume">
                                 <ul className="timeline">
                                     {resume.resumeList.map((job, idx) => (
-                                        <li className={idx % 2 === 0 ? 'timeline-inverted' : 'timeline'} key={idx}>
+                                        <li className={idx % 2 === 0 ? 'timeline-inverted arrow-left' : 'timeline arrow-right'} key={idx}>
                                             <div className="posted-date">
                                                 {job.currentflag ? <span className="month">{job.startyear} - {currentYear}</span> : <span className="month">{job.year}</span>}
                                             </div>

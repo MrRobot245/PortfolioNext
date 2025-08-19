@@ -137,14 +137,14 @@ export default defineType({
               name: "yearstart",
               title: "Year Started",
               type: "string",
-              hidden: ({ document }) => !!document?.currentFlag,
+              hidden: ({ document }) => !document?.currentFlag,
             },
             {
               name: "year",
               title: "Years Worked",
               description: "(xxxx-xxxx or Present)",
               type: "string",
-              hidden: ({ document }) => !document?.currentFlag,
+              hidden: ({ document }) => !!document?.currentFlag,
             },
             {
               name: "jobtitle",
