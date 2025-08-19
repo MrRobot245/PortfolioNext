@@ -54,7 +54,6 @@ export default function Skills() {
                                         delay: idx * 0.2,
                                         ease: "easeInOut",
                                     }}
-                                    viewport={{ once: true }}
                                 />
                             </div>
                         </div>
