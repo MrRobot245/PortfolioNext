@@ -1,4 +1,7 @@
 # Nathan Reymer
+Next.js + Tailwind and some custom CSS as the frontend
+Sanity.io as the backend
+Resend as the contact/mail server
 
 
 ## How to run
