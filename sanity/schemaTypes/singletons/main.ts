@@ -119,6 +119,102 @@ export default defineType({
       of: [{ type: "block" }],
       validation: (Rule) => Rule.required(),
     }),
+
+    defineField({
+      name: "resumeList",
+      title: "Resume Work",
+      type: "array",
+      of: [
+        {
+          type: "object", // Defines an inline object type
+          fields: [
+            {
+              name: "currentFlag",
+              title: "Current Job?",
+              type: "boolean",
+            },
+            {
+              name: "yearstart",
+              title: "Year Started",
+              type: "string",
+              hidden: ({ document }) => !!document?.currentFlag,
+            },
+            {
+              name: "year",
+              title: "Years Worked",
+              description: "(xxxx-xxxx or Present)",
+              type: "string",
+              hidden: ({ document }) => !document?.currentFlag,
+            },
+            {
+              name: "jobtitle",
+              title: "Job Title",
+              type: "string",
+            },
+            {
+              name: "businessname",
+              title: "Business Name",
+              type: "string",
+            },
+            {
+              name: "body",
+              title: "Job Description",
+              type: "array",
+              of: [{ type: "block" }],
+            },
+          ],
+          preview: {
+            select: {
+              title: "jobtitle", // Show the URL as the title
+              subtitle: "businessname", // Optional: also show the icon name
+            },
+          },
+        },
+      ],
+      validation: (Rule) => Rule.required(),
+    }),
+
+    defineField({
+      name: "educationList",
+      title: "Education List",
+      type: "array",
+      of: [
+        {
+          type: "object", // Defines an inline object type
+          fields: [
+            {
+              name: "year",
+              title: "Years Worked",
+              description: "(xxxx-xxxx or Present)",
+              type: "string",
+            },
+            {
+              name: "school",
+              title: "School Title",
+              type: "string",
+            },
+            {
+              name: "program",
+              title: "Program Name",
+              type: "string",
+            },
+            {
+              name: "body",
+              title: "School Description",
+              type: "array",
+              of: [{ type: "block" }],
+            },
+          ],
+          preview: {
+            select: {
+              title: "school", // Show the URL as the title
+              subtitle: "program", // Optional: also show the icon name
+            },
+          },
+        },
+      ],
+      validation: (Rule) => Rule.required(),
+    }),
   ],
 
   preview: {
