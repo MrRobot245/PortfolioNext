@@ -63,7 +63,7 @@ export default function PhotoContent({ photos }) {
                                         <img
                                             ref={ref}
                                             onClick={open}
-                                            src={urlFor(photo).width(600).url()}
+                                            src={urlFor(photo).width(800).url()}
                                             className="w-full h-full object-cover rounded-lg cursor-pointer"
                                             alt=""
                                             loading="lazy"
