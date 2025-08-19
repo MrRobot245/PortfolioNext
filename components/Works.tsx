@@ -29,7 +29,7 @@ export default async function Works() {
                                             </i>
                                         </a>
                                     </div>
-                                    <img src={urlFor(work.image).url()} alt={work.title} className="w-full object-cover h-full h-[200px] rounded image-cover" key={idx} />
+                                    <img src={urlFor(work.image).url()} alt={work.title} className="w-full object-cover h-[200px] rounded image-cover" key={idx} />
                                     <div className="portfolio-info">
                                         <h3>{work.title}</h3>
                                     </div>
