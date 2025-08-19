@@ -49,3 +49,6 @@ p {
     left: 1px;
   }
 }
+.grecaptcha-badge {
+  visibility: hidden;
+}
