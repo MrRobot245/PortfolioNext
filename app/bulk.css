@@ -1086,7 +1086,7 @@ Resume Timeline
 .portfolio-item {
   padding-right: 5px;
   padding-left: 5px;
-  min-height: 250px;
+  min-height: 200px;
 }
 .portfolio-bg {
   background: #fff;
@@ -1160,7 +1160,7 @@ Resume Timeline
   width: 90px;
   height: 40px;
   position: absolute;
-  top: 40%;
+  top: 50%;
   left: 50%;
   margin-top: -20px;
   margin-left: -30px;

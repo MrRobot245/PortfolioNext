@@ -215,6 +215,47 @@ export default defineType({
       ],
       validation: (Rule) => Rule.required(),
     }),
+
+    defineField({
+      name: "worksList",
+      title: "Works List",
+      type: "array",
+      of: [
+        {
+          type: "object", // Defines an inline object type
+          fields: [
+            {
+              name: "image",
+              title: "Image",
+              type: "image",
+            },
+            {
+              name: "link",
+              title: "link",
+              type: "url",
+            },
+            {
+              name: "title",
+              title: "Title Text",
+              type: "string",
+            },
+            {
+              name: "description",
+              title: "Description",
+              type: "array",
+              of: [{ type: "block" }],
+            },
+          ],
+          preview: {
+            select: {
+              title: "title", // Show the URL as the title
+              media: "image", // Optional: also show the icon name
+            },
+          },
+        },
+      ],
+      validation: (Rule) => Rule.required(),
+    }),
   ],
 
   preview: {
