@@ -14,6 +14,7 @@ export async function generateMetadata() {
 
 export default async function Photography() {
     const photos = await client.fetch(PHOTO_QUERY);
+    // console.log(photos)
 
     return (
         <>

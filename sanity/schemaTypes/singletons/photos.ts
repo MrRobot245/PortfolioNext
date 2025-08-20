@@ -20,7 +20,9 @@ export default defineType({
           type: "image",
           options: {
             hotspot: true, // Optional: enables hotspot for responsive cropping
+            metadata: ["image", "exif"],
           },
+          // Optional: include additional metadata
         },
       ],
       validation: (Rule) => Rule.required(),

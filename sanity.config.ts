@@ -8,7 +8,7 @@ import { visionTool } from "@sanity/vision";
 import { defineConfig } from "sanity";
 import { colorInput } from "@sanity/color-input";
 import { structureTool } from "sanity/structure";
-
+import { media, mediaAssetSource } from "sanity-plugin-media";
 // Go to https://www.sanity.io/docs/api-versioning to learn how API versioning works
 import { apiVersion, dataset, projectId } from "./sanity/env";
 import { schemaTypes } from "./sanity/schemaTypes";
@@ -63,8 +63,17 @@ export default defineConfig({
     }),
     // structureTool(),
     colorInput(),
+    media(),
     // Vision is for querying with GROQ from inside the Studio
     // https://www.sanity.io/docs/the-vision-plugin
     visionTool({ defaultApiVersion: apiVersion }),
   ],
+  // form: {
+  //   // Don't use this plugin when selecting files only (but allow all other enabled asset sources)
+  //   file: {
+  //     assetSources: previousAssetSources => {
+  //       return previousAssetSources.filter(assetSource => assetSource !== mediaAssetSource)
+  //     }
+  //   }
+  // }
 });

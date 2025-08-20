@@ -13,4 +13,18 @@ export const MAIN_QUERY = defineQuery(`*[_type=="main" ][0]{
 
 export const SEO_QUERY = defineQuery(`*[_type=="seo" ][0]`);
 
-export const PHOTO_QUERY = defineQuery(`*[_type=="photos" ][0]`);
+export const PHOTO_QUERY = defineQuery(`*[_type=="photos" ][0]{
+  ...,
+  photoCollection[] {
+      asset->{
+        url,
+        metadata {
+          exif,
+          dimensions,
+          hasAlpha,
+          isOpaque
+        }
+      }
+},
+
+  }`);
